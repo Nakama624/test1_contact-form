@@ -4,12 +4,11 @@
 <link rel="stylesheet" href="{{ asset('css/index.css') }}">
 @endsection
 
-
 @section('content')
 <!-- ここにページごとの内容を書く -->
 <div class="content">
   <h2 class="content__title">Contact</h2>
-  < class="create-form">
+  <form class="create-form">
     <!-- お名前 -->
     <div class="create-form__name">
       <p class="create-form__title">お名前<span class="create-form__title--red">※</span></p>
