@@ -1,0 +1,129 @@
+.content{
+  max-width: 1230px;
+  margin: 0 auto;
+}
+.content__title {
+  margin: 0 auto;
+  padding: 20px 0;
+  width:100%;
+  color: #8C7F74;
+  text-align: center;
+}
+
+.create-form{
+  width: 70%;
+  margin: 0 auto;
+}
+
+.create-form__title{
+  width: 30%;
+  display: inline-block;
+  color: #8C7F74;
+}
+
+.create-form__title--red{
+  color:red;
+}
+
+input,
+textarea,
+select {
+  color: #8C7F74;
+  background: #EFEFEF;
+  border:none;
+}
+
+label{
+  color: #8C7F74;
+}
+
+.create-form__name,
+.create-form__email,
+.create-form__tel,
+.create-form__address,
+.create-form__building,
+.create-form__detail,
+.create-form__category{
+  display: flex;
+}
+
+.create-form__email-input,
+.create-form__address-input,
+.create-form__building-input{
+  width:70%;
+  height:30px;
+  margin:auto 0;
+}
+
+.create-form__fullname,
+.create-form--info-tel {
+  display: flex;
+  width: 70%;
+}
+
+/* お名前 */
+.create-form__firstname--input,
+.create-form__lastname--input{
+  width: 50%;
+  height: 30px;
+  margin: auto 0;
+}
+
+.create-form__lastname--input{
+  margin-left: 20px;
+}
+
+
+/* 性別 */
+.create-form__gender-checkbox{
+  margin-right: 50px;
+}
+
+
+/* 電話番号 */
+.create-form__tel1-input,
+.create-form__tel2-input,
+.create-form__tel3-input{
+  width: 35%;
+  height: 30px;
+  margin: auto 0;
+  text-align: center;
+}
+
+
+/* お問い合わせの種類 */
+.create-form__category-select {
+  width: 35%;
+  height: 30px;
+  margin: auto 0;
+}
+
+
+/* お問い合わせ内容 */
+.create-form__title--detail {
+  width: 30%;
+  display: inline-block;
+  color: #8C7F74;
+  height: 80px;
+}
+
+.create-form__detail-text{
+  width:70%;
+  height: 80px;
+  margin: auto 0;
+}
+
+
+/* ボタン */
+.create-form__button{
+  margin: 50px auto;
+  display: flex;
+  justify-content: center;
+}
+
+.create-form__button-submit{
+  background: #8C7F74;
+  color: #fff;
+  padding:5px 20px;
+  border: none;
+}

@@ -1,6 +1,6 @@
-#contact-form
+# contact-form
 
-##Laravel環境構築
+## Laravel環境構築
 ・プロジェクトディレクトリ作成
   contact-form
             ├── docker
@@ -34,13 +34,13 @@
 ・php artisan migrate:fresh（←既存のusersテーブルを使用したため、flesh）
 
 
-##使用技術（実行環境）
+## 使用技術（実行環境）
 PHP：Laravel Framework 8.83.29
 
-##ER図
+## ER図
 ![alt text](image.png)
 
-##URL
+## URL
 http://localhost/
 
 
