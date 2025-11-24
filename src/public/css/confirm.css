@@ -1,0 +1,101 @@
+.content {
+  max-width: 1230px;
+  margin: 0 auto;
+}
+
+.content__title {
+  margin: 0 auto;
+  padding: 20px 0;
+  width: 100%;
+  color: #8C7F74;
+  text-align: center;
+}
+
+.confirm-form {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.confirm-form__title {
+  width: 30%;
+  color: #fff;
+  background: #8C7F74;
+  font-size: 14px;
+  margin: 0;
+  padding-left:30px;
+  display: flex;
+  align-items: center;
+}
+
+input,
+textarea,
+select {
+  color: #8C7F74;
+  border: none;
+}
+
+.confirm-form__name,
+.confirm-form__gender,
+.confirm-form__email,
+.confirm-form__tel,
+.confirm-form__address,
+.confirm-form__building,
+.confirm-form__category,
+.confirm-form__detail {
+  display: flex;
+  border: 1px solid #eee;
+}
+
+.confirm-form__inner {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  margin: 0 auto;
+}
+
+.confirm-form__fullname-input,
+.confirm-form__gender-checkbox,
+.confirm-form__email-input,
+.confirm-form__tel1-input,
+.confirm-form__address-input,
+.confirm-form__building-input,
+.confirm-form__category-select{
+  padding: 0 30px;
+  width:70%;
+}
+
+
+.confirm-form__inner--textarea {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  margin: 0 auto;
+}
+.confirm-form__detail--textarea {
+  padding: 0 30px;
+  width: 70%;
+  height:100%;
+}
+
+
+/* ボタン */
+.confirm-form__button {
+  margin: 50px auto;
+  display: flex;
+  justify-content: center;
+}
+
+.confirm-form__button-submit {
+  background: #8C7F74;
+  color: #fff;
+  padding: 5px 20px;
+  border: none;
+}
+
+.confirm-form__button-modify{
+  background: #fff;
+  color: #8C7F74;
+  padding: 5px 20px;
+  border: none;
+  margin-left: 10px;
+}

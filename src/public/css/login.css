@@ -1,0 +1,71 @@
+body {
+  background: #EAE6E3;
+}
+
+.content {
+  max-width: 1230px;
+  margin: 0 auto;
+}
+
+.content__title {
+  margin: 0 auto;
+  padding: 20px 0;
+  width: 100%;
+  color: #8C7F74;
+  text-align: center;
+}
+
+.login-form {
+  width: 50%;
+  margin: 0 auto;
+  background: #fff;
+}
+
+.login-form__content {
+  padding: 60px 120px;
+  margin: 0 auto;
+}
+
+.login-form__name {
+  width: 100%;
+}
+
+.login-form__title {
+  margin-bottom: 10px;
+  color: #8C7F74;
+}
+
+.login-form__section {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.login-form__input {
+  width: 100%;
+  color: #8C7F74;
+  background: #EFEFEF;
+  border: none;
+  padding: 10px;
+}
+
+
+
+/* ボタン */
+.login-form__button {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.login-form__button-submit {
+  background: #8C7F74;
+  color: #fff;
+  padding: 5px 20px;
+  border: none;
+}
+
+/* エラー */
+.form__error {
+  color: red;
+  font-size: 12px;
+}

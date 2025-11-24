@@ -7,7 +7,11 @@
   padding: 20px 15px;
   max-width: 1230px;
   border-bottom: 1px solid #CCC1B7;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  /* ロゴを中央に配置 */
+  align-items: center;
+  position: relative;
 }
 
 .header__logo {
@@ -15,4 +19,19 @@
   text-decoration: none;
   font-weight: bold;
   font-size: 24px;
+}
+
+/* 画面によって表示非表示 */
+.header-btn{
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.header-btn__design{
+  background: #EFEFEF;
+  color: #8C7F74;
+  padding: 5px 20px;
+  border: 1px solid #8C7F74;
 }

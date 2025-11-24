@@ -1,0 +1,28 @@
+.content {
+  margin: 0 auto;
+  padding: 250px 15px 30px 15px;
+  max-width: 1230px;
+}
+
+.thanks__message {
+  margin: 0 auto;
+  padding: 20px 0;
+  width: 100%;
+  color: #8C7F74;
+  text-align: center;
+}
+
+.button{
+  display: flex;
+  padding: 40px 0;
+  width: 100%;
+}
+.button-home{
+  margin: 0 auto;
+  background: #8C7F74;
+  color: #fff;
+  border: none;
+  width: 90px;
+  height:30px;
+  text-align: center;
+}

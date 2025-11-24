@@ -10,13 +10,23 @@
 </head>
 
 <body>
-    <header class="header">
+  <header class="header">
     <div class="header__inner">
-      <a class="header__logo" href="/">
-        FashionablyLate
-      </a>
+      <a class="header__logo" href="/">FashionablyLate</a>
+      @if (request()->is('register'))
+      <div class="header-btn">
+        <button class="header-btn__design">Login</button>
+      </div>
+      @elseif(request()->is('login'))
+      <div class="header-btn">
+        <button class="header-btn__design">register</button>
+      </div>
+      @elseif(request()->is('admin'))
+      <div class="header-btn">
+        <button class="header-btn__design">LogOut</button>
+      </div>      
+      @endif
     </div>
-    <!-- ここにlogOutボタン入れる？ -->
   </header>
 
   <main>
