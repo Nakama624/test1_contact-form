@@ -16,25 +16,39 @@ use App\Http\Controllers\ManagementController;
 */
 
 
-
-// ＝＝＝お問い合わせフォーム＝＝＝
-// 1.入力画面
+// PG01
 Route::get('/', [ContactController::class, 'index']);
 
-// 2.お問い合わせ確認画面
+// PG02
 Route::POST('/confirm', [ContactController::class, 'confirm']);
 
-// 3.サンクスページ
+// PG03
 Route::POST('/thanks', [ContactController::class, 'store']);
 
-// ＝＝＝認証＝＝＝
-// 4.確認画面
+// PG04
+Route::get('/admin', [ManagementController::class, 'index']);
+
+// PG05
+Route::post('/search', [ManagementController::class, 'search'])->name('admin.search');
+
+// PG06
+Route::get('/reset', [ManagementController::class, 'reset']);
+
+// PG07
+Route::delete('/delete/{id}', [ManagementController::class, 'remove']);
+
+// PG08
 Route::get('/register', [CertificationController::class, 'index']);
 Route::POST('/register', [CertificationController::class, 'store']);
 
-// 5.ログイン画面
+// PG09
 Route::get('/login', [CertificationController::class, 'login']);
 
-// ＝＝＝管理画面＝＝＝
-// 6.管理画面
-Route::get('/admin', [ManagementController::class, 'index']);
+// PG10
+
+
+// PG11
+
+
+
+

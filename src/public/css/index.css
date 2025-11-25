@@ -92,7 +92,7 @@ label {
 .create-form__gender-group {
   display: flex;
   width: 100%;
-  gap: 20px;
+  gap: 50px;
   margin: 15px auto 0 auto;
 }
 
