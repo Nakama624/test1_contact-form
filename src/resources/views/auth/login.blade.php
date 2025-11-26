@@ -7,14 +7,14 @@
 @section('content')
 <div class="content">
   <h2 class="content__title">login</h2>
-  <form class="login-form" action="/register" method="post">
+  <form class="login-form" action="/login" method="post">
     @csrf
     <div class="login-form__content">
       <!-- メールアドレス -->
       <div class="login-form__email">
         <p class="login-form__title">メールアドレス</p>
         <div class="login-form__section">
-          <input class="login-form__input" type="text" name="email" placeholder="例　test@example.com" value="{{ old('email') }}">
+          <input class="login-form__input" type="email" name="email" placeholder="例　test@example.com" value="{{ old('email') }}">
           <div class="form__error">
             @error('email')
               {{ $message }}
@@ -26,7 +26,7 @@
       <div class="login-form__password">
         <p class="login-form__title">パスワード</p>
         <div class="login-form__section">
-          <input class="login-form__input" type="text" name="password" placeholder="例　coachtech1106" value="{{ old('password') }}">
+          <input class="login-form__input" type="password" name="password" placeholder="例　coachtech1106">
           <div class="form__error">
             @error('password')
               {{ $message }}

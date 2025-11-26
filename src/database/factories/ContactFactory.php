@@ -23,9 +23,9 @@ class ContactFactory extends Factory
             'gender' => $this->faker->numberBetween(1,3),
             'email' => $this->faker->safeEmail(),
             'tel' => $this->faker->randomNumber(),
-            'address' => $this->faker->text(255),
-            'building' => $this->faker->text(255),
-            'detail' => $this->faker->text(200)
+            'address' => $this->faker->text(30),
+            'building' => $this->faker->text(30),
+            'detail' => $this->faker->text(100)
         ];
     }
 }

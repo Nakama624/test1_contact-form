@@ -35,7 +35,7 @@
 
 /* 性別 */
 .search-form__gender-select{
-  width:80px;
+  width:100px;
   height: 35px;
   color: #8C7F74;
   background: #EFEFEF;
@@ -53,6 +53,7 @@
   padding: 0 10px;
 }
 
+/* 作成日 */
 .search-created-input{
   width: 150px;
   height: 35px;
@@ -60,6 +61,7 @@
   background: #EFEFEF;
   color: #8C7F74;
   border: 1px solid #8C7F74;
+  padding: 0 10px;
 }
 
 /* ボタン */
@@ -147,7 +149,7 @@
 
 
 
-/* モーダル全体（最初は非表示） */
+/* モーダル */
 .modal {
   display: none;
   position: fixed;
@@ -157,7 +159,6 @@
   align-items: center;
 }
 
-/* :target が当たったときだけ表示 */
 .modal:target {
   display: flex;
 }
@@ -215,65 +216,64 @@
 }
 
 
-
-
-
-/* エクスポート + ページネーションの行 */
-.export-pagenation {
-  display: flex;
-  justify-content: space-between;
-  /* 左:エクスポート / 右:ページネーション */
-  align-items: center;
-  margin: 24px 0 16px;
-  /* 上下の余白は好みで調整 */
-}
-
-/* ページネーションブロック自体を右寄せ */
+/* ページネーション */
 .pagenation {
   margin-left: auto;
 }
 
-/* Laravelのページネーション(ul.pagination)の見た目調整 */
-/* .pagination {
-  display: flex;
-  list-style: none;
-  padding-left: 0;
-  gap: 4px;
-} */
-
-/* 各ページ番号 */
-.pagination a {
-  background: #EFEFEF;
+.pagination-nav {
   display: flex;
   justify-content: center;
-  align-items: center;
-  min-width: 28px;
-  height: 26px;
-  padding: 0 6px;
-  border: 1px solid #cfc5bc;
-  border-radius: 6px;
-  font-size: 13px;
-  color: #6b5a4a;
-  text-decoration: none;
 }
 
+.pagination-custom {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-flex;
+  border: 1px solid #dcdcdc;
+  border-radius: 2px;
+  overflow: hidden;
+  font-size: 13px;
+}
 
-/* アクティブなページ */
-/* .pagination .active span {
-  background-color: #8C7F74;
-  border-color: #8C7F74;
+.pagination-custom .pagination__item {
+  min-width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid #dcdcdc;
+  background: #fff;
+}
+
+.pagination-custom .pagination__item:last-child {
+  border-right: none;
+}
+
+.pagination-custom a,
+.pagination-custom span {
+  display: block;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  color: #8c7f74;
+  line-height: 32px;
+}
+
+.pagination-custom .pagination__item--active {
+  background: #8c7f74;
+}
+
+.pagination-custom .pagination__item--active span {
   color: #fff;
   font-weight: bold;
-} */
+}
 
-/* 非活性(Prev/Nextが使えない時) */
-/* .pagination .disabled span {
-  color: #c5b8ac;
-  border-color: #e5ddd3;
-} */
+.pagination-custom .pagination__item--disabled span {
+  color: #ccc;
+}
 
-svg.w-5.h-5 {
-  /*paginateメソッドの矢印の大きさ調整のために追加*/
-  width: 30px;
-  height: 30px;
+.pagination-custom a:hover {
+  background: #f5f1ee;
 }

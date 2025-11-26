@@ -26,10 +26,12 @@ Route::POST('/confirm', [ContactController::class, 'confirm']);
 Route::POST('/thanks', [ContactController::class, 'store']);
 
 // PG04
-Route::get('/admin', [ManagementController::class, 'index']);
+Route::middleware('auth')->group(function () {
+    Route::get('/admin', [ManagementController::class, 'index']);
+});
 
 // PG05
-Route::post('/search', [ManagementController::class, 'search'])->name('admin.search');
+Route::match(['GET', 'POST'], '/search', [ManagementController::class, 'search']);
 
 // PG06
 Route::get('/reset', [ManagementController::class, 'reset']);
@@ -38,17 +40,13 @@ Route::get('/reset', [ManagementController::class, 'reset']);
 Route::delete('/delete/{id}', [ManagementController::class, 'remove']);
 
 // PG08
-Route::get('/register', [CertificationController::class, 'index']);
-Route::POST('/register', [CertificationController::class, 'store']);
-
 // PG09
-Route::get('/login', [CertificationController::class, 'login']);
-
 // PG10
-
+// fortify
 
 // PG11
-
+// // ★ エクスポート（表示ページ分だけ）
+// Route::get('/export', [ManagementController::class, 'export'])->name('contacts.export');
 
 
 

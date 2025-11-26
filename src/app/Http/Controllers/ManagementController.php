@@ -28,7 +28,6 @@ class ManagementController extends Controller
   public function search(Request $request)
   {
     $categories = DB::table('categories')->get();
-
     $query = Contact::query();
 
     // メール or 名前
@@ -59,13 +58,13 @@ class ManagementController extends Controller
         $query->whereDate('created_at', $request->created_at);
     }   
 
-    $contacts = $query->paginate(7)->appends($request->query());
     $search = $request->only(['name_email', 'gender', 'category_id', 'created_at']);
-
+    $contacts = $query->paginate(7)->appends($search);
+    
     return view('admin', [
-      'categories' => $categories,
-      'contacts'   => $contacts,
-      'search'     => $search,
+        'categories' => $categories,
+        'contacts'   => $contacts,
+        'search'     => $search,
     ]);
   }
 

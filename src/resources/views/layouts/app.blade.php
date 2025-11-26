@@ -13,24 +13,35 @@
   <header class="header">
     <div class="header__inner">
       <a class="header__logo" href="/">FashionablyLate</a>
-      @if (request()->path() === 'register')
+      <!-- ボタンの表示非表示 -->
+      @if (request()->path() == '/' || 
+              request()->path() == 'confirm')
+        <!-- お問い合わせフォーム、確認画面(表示なし) -->
         <div class="header-btn">
-          <a href="/login" class="header-btn__design">Login</a>
         </div>
-      @elseif (request()->path() === 'login')
+      @elseif (request()->path() == 'login')
+        <!-- ログイン画面 -->
         <div class="header-btn">
-          <a href="/register" class="header-btn__design">register</a>
+          <a href="/register" class="header-btn__design">Register</a>
         </div>
-      @elseif (request()->path() === 'admin' ||
-              request()->path() === 'search' ||
-              request()->path() === 'reset' )  
-        <div class="header-btn">
-          <a href="/logout" class="header-btn__design">LogOut</a>
-        </div>      
+      @else
+        <!-- 認証あり -->
+        @if (Auth::check())
+          <form class="form" action="/logout" method="post">
+            @csrf
+            <div class="header-btn">
+              <button type="submit" class="header-btn__design">LogOut</button>
+            </div>
+          </form>
+        @else
+          <!-- 認証なし -->
+          <div class="header-btn">
+            <a href="/login" class="header-btn__design">Login</a>
+          </div>
+        @endif
       @endif
     </div>
   </header>
-
   <main>
     @yield('content')
   </main>

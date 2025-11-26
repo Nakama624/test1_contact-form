@@ -14,14 +14,14 @@ class CertificationController extends Controller
   }
 
 
-  // 入力値を保存
-  public function store(CertificationRequest $request)
-  { 
-    $user = $request->only(['name', 'email', 'password']);
-    User::create($user);
+  // // 入力値を保存
+  // public function store(CertificationRequest $request)
+  // { 
+  //   $user = $request->only(['name', 'email', 'password']);
+  //   User::create($user);
 
-    return view('register');
-  }
+  //   return view('register');
+  // }
 
   // ログイン画面を表示
   public function login(){

@@ -7,11 +7,7 @@
 @section('content')
 <div class="content">
   <h2 class="content__title">Admin</h2>
-
   <div class="content-item">
-
-
-
     <form action="/search" method="POST">
     @csrf
       <div class="search-form">
@@ -52,16 +48,12 @@
       </div>
     </form>
 
-
-
-
-
     <div class="export-pagenation">
       <!-- エクスポート -->
       <button class="button__export" type="submit">エクスポート</button>
       <!-- ページネーション -->
       <div class="pagenation">
-        {{ $contacts->links() }}
+        {{ $contacts->links('vendor.pagination.numbers-only') }}
       </div>
     </div>
     @php 
@@ -83,7 +75,6 @@
           <td class="contact-list__td">
             {{$contact->last_name. ' ' . $contact->first_name}}
           </td>
- 
           <td class="contact-list__td">{{ $genderText[$contact->gender] }}</td>
           <td class="contact-list__td">{{$contact->email}}</td>
           <td class="contact-list__td">{{ $categories->firstWhere('id', $contact->category_id)->content }}</td>
