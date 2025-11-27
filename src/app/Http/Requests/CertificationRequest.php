@@ -21,6 +21,8 @@ class CertificationRequest extends FormRequest
    *
    * @return array
    */
+
+  // 新規登録＆ログイン
   public function rules()
   {
     return [

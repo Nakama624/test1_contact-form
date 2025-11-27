@@ -17,14 +17,7 @@ class ManagementController extends Controller
           'contacts'   => $contacts,
     ]);
   }
-
   // 検索
-  // public function find()
-  // {
-  //     $categories = DB::table('categories')->get();
-  //     return view('find', ['input' => '']);
-  // }
-
   public function search(Request $request)
   {
     $categories = DB::table('categories')->get();
@@ -68,6 +61,7 @@ class ManagementController extends Controller
     ]);
   }
 
+  // 検索リセット
   public function reset()
   {
     $categories = DB::table('categories')->get();
@@ -76,11 +70,7 @@ class ManagementController extends Controller
     return view('admin', compact('categories', 'contacts'));
   } 
 
-
-
-
-
-  // お問い合わせフォーム削除
+  // お問い合わせ削除
   public function remove($id)
   {
     Contact::findOrFail($id)->delete();
