@@ -12,20 +12,5 @@ class CertificationController extends Controller
   public function index(){
     return view('register');
   }
-
-
-  // // 入力値を保存
-  // public function store(CertificationRequest $request)
-  // { 
-  //   $user = $request->only(['name', 'email', 'password']);
-  //   User::create($user);
-
-  //   return view('register');
-  // }
-
-  // ログイン画面を表示
-  public function login(){
-    return view('login');
-  }
 }
 

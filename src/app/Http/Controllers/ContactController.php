@@ -27,7 +27,7 @@ class ContactController extends Controller
   // 入力値を保存
   public function store(ContactRequest $request)
   { 
-    // 電話番号を結合して代入
+    // 電話番号を結合
     $tel = $request->tel1.$request->tel2.$request->tel3;
     $contact = $request->only(['first_name', 'last_name', 'gender', 'email', 'address', 'building','category_id','detail']);
     $contact['tel'] = $tel;

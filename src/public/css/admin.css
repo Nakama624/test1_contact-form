@@ -67,7 +67,7 @@
 /* ボタン */
 .search-form__button {
   display: flex;
-  gap: 20px;
+  gap: 25px;
 }
 .search-form__button-search{
   background: #8C7F74;

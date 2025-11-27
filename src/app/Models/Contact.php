@@ -20,6 +20,4 @@ class Contact extends Model
     'category_id',
     'detail',
   ];
-
-
 }

@@ -27,7 +27,7 @@ Route::POST('/thanks', [ContactController::class, 'store']);
 
 // PG04
 Route::middleware('auth')->group(function () {
-    Route::get('/admin', [ManagementController::class, 'index']);
+  Route::get('/admin', [ManagementController::class, 'index']);
 });
 
 // PG05
@@ -46,7 +46,7 @@ Route::delete('/delete/{id}', [ManagementController::class, 'remove']);
 
 // PG11
 // // ★ エクスポート（表示ページ分だけ）
-// Route::get('/export', [ManagementController::class, 'export'])->name('contacts.export');
+
 
 
 
