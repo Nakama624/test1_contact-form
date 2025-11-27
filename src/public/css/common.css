@@ -9,7 +9,6 @@
   border-bottom: 1px solid #CCC1B7;
   display: flex;
   justify-content: center;
-  /* ロゴを中央に配置 */
   align-items: center;
   position: relative;
 }
@@ -22,14 +21,14 @@
 }
 
 /* 画面によって表示非表示 */
-.header-btn{
+.header__btn{
   position: absolute;
   right: 15px;
   top: 50%;
   transform: translateY(-50%);
 }
 
-.header-btn__design{
+.header__btn--design{
   background: #EFEFEF;
   color: #8C7F74;
   padding: 5px 10px;

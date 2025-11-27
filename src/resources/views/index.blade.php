@@ -7,7 +7,7 @@
 @section('content')
 <!-- ここにページごとの内容を書く -->
 <div class="content">
-  <h2 class="content__title">Contact</h2>
+  <h2 class="content-title">Contact</h2>
   <form class="create-form" action="/confirm" method="post">
     @csrf
     <!-- お名前 -->
@@ -74,7 +74,7 @@
       <p class="create-form__title">電話番号<span class="create-form__title--red">※</span></p>
       <div class="create-form__section">
         <div class="create-form--info-tel">
-          {{-- 1つ目（tel1） --}}
+          <!-- tel1 -->
           <div class="create-form__tel-item">
             <input class="create-form__tel1-input" type="text" name="tel1"
                   placeholder="080" value="{{ old('tel1') }}">
@@ -85,6 +85,7 @@
             </div>
           </div>
           <span class="create-form__tel-hyphen">-</span>
+          <!-- tel2 -->
           <div class="create-form__tel-item">
             <input class="create-form__tel2-input" type="text" name="tel2"
                   placeholder="1234" value="{{ old('tel2') }}">
@@ -95,7 +96,7 @@
             </div>
           </div>
           <span class="create-form__tel-hyphen">-</span>
-          {{-- 3つ目（tel3） --}}
+          <!-- tel3 -->
           <div class="create-form__tel-item">
             <input class="create-form__tel3-input" type="text" name="tel3"
                   placeholder="5678" value="{{ old('tel3') }}">

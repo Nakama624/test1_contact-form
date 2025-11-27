@@ -6,7 +6,7 @@
 
 @section('content')
 <div class="content">
-  <h2 class="content__title">Register</h2>
+  <h2 class="content-title">Register</h2>
   <form class="create-form" action="/register" method="post">
     @csrf
     <div class="create-form__content">
@@ -22,7 +22,6 @@
           </div>
         </div>
       </div>
-    
       <!-- メールアドレス -->
       <div class="create-form__email">
         <p class="create-form__title">メールアドレス</p>

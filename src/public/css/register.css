@@ -7,7 +7,7 @@ body {
   margin: 0 auto;
 }
 
-.content__title {
+.content-title {
   margin: 0 auto;
   padding: 20px 0;
   width: 100%;
@@ -24,10 +24,6 @@ body {
 .create-form__content{
   padding: 60px 120px;
   margin: 0 auto;
-}
-
-.create-form__name{
-  width: 100%;
 }
 
 .create-form__title{
@@ -47,8 +43,6 @@ body {
   border: none;
   padding:10px;
 }
-
-
 
 /* ボタン */
 .create-form__button {

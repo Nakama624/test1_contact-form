@@ -6,7 +6,7 @@
 
 @section('content')
 <div class="content">
-  <h2 class="content__title">Confirm</h2>
+  <h2 class="content-title">Confirm</h2>
   <form class="confirm-form" action="/thanks" method="post">
     @csrf
     <!-- お名前 -->
@@ -29,7 +29,7 @@
         @endphp
         <!-- 表示用 -->
         <input class="confirm-form__gender-checkbox" value="{{ $genderText[$contact['gender']] ?? '' }}" readonly />
-        <!-- 送信用（数値のまま） -->
+        <!-- 送信用 -->
         <input type="hidden" name="gender" value="{{ $contact['gender'] }}">
       </div>
     </div>
@@ -44,9 +44,9 @@
     <div class="confirm-form__tel">
       <div class="confirm-form__inner">
         <p class="confirm-form__title">電話番号</p>
-        <input class="confirm-form__tel1-input"  
+        <input class="confirm-form__tel-input"  
           value="{{ $contact['tel1'] }}{{ $contact['tel2'] }}{{ $contact['tel3'] }}" name="tel" readonly />
-        <!-- 送信用（バリデーションとstore用） -->
+        <!-- 送信用 -->
         <input type="hidden" name="tel1" value="{{ $contact['tel1'] }}">
         <input type="hidden" name="tel2" value="{{ $contact['tel2'] }}">
         <input type="hidden" name="tel3" value="{{ $contact['tel3'] }}">

@@ -6,7 +6,7 @@
 
 @section('content')
 <div class="content">
-  <h2 class="content__title">login</h2>
+  <h2 class="content-title">login</h2>
   <form class="login-form" action="/login" method="post" novalidate>
     @csrf
     <div class="login-form__content">
@@ -38,7 +38,7 @@
       <div class="login-form__button">
         <button class="login-form__button-submit" type="submit">ログイン</button>
       </div>
-    </form>
-  </div>
+    </div>
+  </form>
 </div>
 @endsection

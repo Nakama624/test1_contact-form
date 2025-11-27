@@ -3,7 +3,7 @@
   margin: 0 auto;
 }
 
-.content__title {
+.content-title {
   margin: 0 auto;
   padding: 20px 0;
   width: 100%;
@@ -56,7 +56,7 @@ select {
 .confirm-form__fullname-input,
 .confirm-form__gender-checkbox,
 .confirm-form__email-input,
-.confirm-form__tel1-input,
+.confirm-form__tel-input,
 .confirm-form__address-input,
 .confirm-form__building-input,
 .confirm-form__category-select{

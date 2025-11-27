@@ -25,7 +25,7 @@
   z-index: 0;
 }
 
-.thanks__message {
+.thanks-message {
   margin: 0 auto;
   padding: 20px 0;
   width: 100%;
@@ -35,12 +35,12 @@
   position: relative;
 }
 
-.button{
+.content__button{
   display: flex;
   padding: 40px 0;
   width: 100%;
 }
-.button-home{
+.content__button-home{
   margin: 0 auto;
   background: #8C7F74;
   color: #fff;

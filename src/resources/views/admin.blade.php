@@ -6,8 +6,9 @@
 
 @section('content')
 <div class="content">
-  <h2 class="content__title">Admin</h2>
+  <h2 class="content-title">Admin</h2>
   <div class="content-item">
+    <!-- 検索 -->
     <form action="/search" method="POST">
     @csrf
       <div class="search-form">
@@ -34,7 +35,7 @@
         <!-- 作成日 -->
         <input type="date"
               name="created_at"
-              class="search-created-input"
+              class="search-form__created-at"
               value="{{ $search['created_at'] ?? '' }}">
         <!-- ボタン -->
         <div class="search-form__button">
@@ -48,10 +49,9 @@
       </div>
     </form>
 
+    <!-- エクスポート＆ページネーション -->
     <div class="export-pagenation">
-      <!-- エクスポート -->
       <button class="button__export" type="submit">エクスポート</button>
-      <!-- ページネーション -->
       <div class="pagenation">
         {{ $contacts->links('vendor.pagination.numbers-only') }}
       </div>
@@ -91,10 +91,9 @@
       <div id="modal-{{ $contact->id }}" class="modal">
         <div class="modal-content">
           <a href="#" class="modal-close">×</a>
-
           <table class="modal-table">
             <tr>
-              <th class="modal-table__header">お名前</thclass=table-name>
+              <th class="modal-table__header">お名前</th>
               <td>{{ $contact->last_name }} {{ $contact->first_name }}</td>
             </tr>
             <tr>
@@ -136,10 +135,6 @@
         </div>
       </div>
     @endforeach
-
-
-
   </div>
 </div>
-
 @endsection

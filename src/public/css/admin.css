@@ -3,7 +3,7 @@
   margin: 0 auto;
 }
 
-.content__title {
+.content-title {
   margin: 0 auto;
   padding: 20px 0;
   width: 100%;
@@ -54,7 +54,7 @@
 }
 
 /* 作成日 */
-.search-created-input{
+.search-form__created-at{
   width: 150px;
   height: 35px;
   color: #8C7F74;

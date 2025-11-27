@@ -8,9 +8,9 @@
 </head>
 <body>
   <div class="content">
-    <h2 class="thanks__message">お問い合わせありがとうございました</h2>
-    <div class="button">
-      <button class="button-home" type="button" onclick="location.href='/'">HOME</button>
+    <h2 class="thanks-message">お問い合わせありがとうございました</h2>
+    <div class="content__button">
+      <button class="content__button-home" type="button" onclick="location.href='/'">HOME</button>
     </div>
   </div>
 </body>
