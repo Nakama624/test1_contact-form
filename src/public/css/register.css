@@ -1,0 +1,65 @@
+
+body {
+  background: #EAE6E3;
+}
+.content {
+  max-width: 1230px;
+  margin: 0 auto;
+}
+
+.content-title {
+  margin: 0 auto;
+  padding: 20px 0;
+  width: 100%;
+  color: #8C7F74;
+  text-align: center;
+}
+
+.create-form {
+  width: 50%;
+  margin: 0 auto;
+  background: #fff;
+}
+
+.create-form__content{
+  padding: 60px 120px;
+  margin: 0 auto;
+}
+
+.create-form__title{
+  margin-bottom: 10px;
+  color: #8C7F74;
+}
+
+.create-form__section{
+  margin: 0 auto;
+  width: 100%;
+}
+
+.create-form__input{
+  width:100%;
+  color: #8C7F74;
+  background: #EFEFEF;
+  border: none;
+  padding:10px;
+}
+
+/* ボタン */
+.create-form__button {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.create-form__button-submit {
+  background: #8C7F74;
+  color: #fff;
+  padding: 5px 20px;
+  border: none;
+}
+
+/* エラー */
+.form__error {
+  color: red;
+  font-size: 12px;
+}

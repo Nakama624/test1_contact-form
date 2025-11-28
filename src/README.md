@@ -1,49 +1,33 @@
-#contact-form
+# contact-form
 
-##Laravel環境構築
-・プロジェクトディレクトリ作成
-  contact-form
-            ├── docker
-            │   ├── mysql
-            │   │   ├── data
-            │   │   └── my.cnf
-            │   ├── nginx
-            │   │   └── default.conf
-            │   └── php
-            │       ├── Dockerfile
-            │       └── php.ini
-            ├── docker-compose.yml
-            └── src
-
-・以下各ファイルの修正
-　docker-compose.yml
-　nginx/default.conf
-　php/Dockerfile
-  php/php.ini
-　mysql/my.cnf
-
+## Laravel環境構築
 ・docker-compose up -d --build
 ・docker-compose exec php bash
 ・composer create-project "laravel/laravel=8.*" . --prefer-dist
 ・config/app.php→'timezone' => 'Asia/Tokyo',（日本時間に変更）
 ・.envで環境変数の修正
-≪マイグレーション≫
+≪マイグレーション/シーディング≫
 ・php artisan make:migration create_categories_table
   php artisan make:migration contacts
  　(usersは既存のテーブルを使用) 
 ・php artisan migrate:fresh（←既存のusersテーブルを使用したため、flesh）
+・php artisan db:seed
 
-
-##使用技術（実行環境）
+## 使用技術（実行環境）
 PHP：Laravel Framework 8.83.29
 
-##ER図
+## ER図
 ![alt text](image.png)
 
-##URL
-http://localhost/
-
-
+## URL
+・お問い合わせフォーム
+　http://localhost/
+・ログイン
+  http://localhost/login
+・管理者新規登録
+  http://localhost/register
+・管理
+  http://localhost/admin
 
 
 

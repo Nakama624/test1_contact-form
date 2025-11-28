@@ -1,0 +1,279 @@
+.content {
+  max-width: 1230px;
+  margin: 0 auto;
+}
+
+.content-title {
+  margin: 0 auto;
+  padding: 20px 0;
+  width: 100%;
+  color: #8C7F74;
+  text-align: center;
+}
+
+.content-item {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.search-form{
+  width:100%;
+  display:flex;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 20px;
+}
+/* 名前＆メールアドレス */
+.search-form__input{
+  width: 300px;
+  height: 35px;
+  font-size: 12px;
+  color: #8C7F74;
+  border: 1px solid #8C7F74;
+  padding: 0 10px;
+}
+
+/* 性別 */
+.search-form__gender-select{
+  width:100px;
+  height: 35px;
+  color: #8C7F74;
+  background: #EFEFEF;
+  border: 1px solid #8C7F74;
+  padding: 0 10px;
+}
+
+/* お問い合わせの種類 */
+.search-form__category-select{
+  width: 200px;
+  height: 35px;
+  color: #8C7F74;
+  background: #EFEFEF;
+  border: 1px solid #8C7F74;
+  padding: 0 10px;
+}
+
+/* 作成日 */
+.search-form__created-at{
+  width: 150px;
+  height: 35px;
+  color: #8C7F74;
+  background: #EFEFEF;
+  color: #8C7F74;
+  border: 1px solid #8C7F74;
+  padding: 0 10px;
+}
+
+/* ボタン */
+.search-form__button {
+  display: flex;
+  gap: 25px;
+}
+.search-form__button-search{
+  background: #8C7F74;
+  color: white;
+  border: none;
+  width: 80px;
+  height: 35px;
+}
+
+.search-form__button-reset{
+  background: #D8C5B4;
+  color: white;
+  border: none;
+  width: 80px;
+  height: 35px;
+}
+
+/* エクスポート＆ページネーション */
+.export-pagenation {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 20px;
+
+}
+
+.button__export {
+  color: #8C7F74;
+  background: #EFEFEF;
+  border: 1px solid #8C7F74;
+  width: 120px;
+  height: 35px;
+}
+/* .pagenation{
+  right: 15px;
+
+} */
+
+
+.contact-list {
+  width: 100%;
+  margin-bottom:30px;
+
+}
+
+
+.contact-list__tr{
+  border: 1px solid #eee;
+}
+
+.contact-list__tr:hover {
+  background: #F5F2EF;
+}
+
+.contact-list__header{
+  background: #8C7F74;
+  color: white;
+  height: 50px;
+  padding: 10px 35px;
+  text-align: left;
+}
+.contact-list__td {
+  height: 60px;
+  padding: 10px 35px;
+  color: #8C7F74;
+  font-size: 14px;
+}
+/* 詳細ボタン */
+.button_content-detail{
+  background: #EFEFEF;
+  color: #8C7F74;
+  padding: 5px 20px;
+  border: 1px solid #8C7F74;
+  text-decoration: none;
+}
+
+
+
+
+
+/* モーダル */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal:target {
+  display: flex;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 50px 90px;
+  width: 60%;
+  max-width: 700px;
+  position: relative;
+  color: #8C7F74;
+  border: 1px solid #8C7F74;
+  box-shadow: 2px 2px 1px #8C7F74;
+}
+
+/* × ボタン */
+.modal-close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 32px;
+  height: 32px;
+  border: 1px solid #8C7F74;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  text-decoration: none;
+  color: #8C7F74;
+  cursor: pointer;
+}
+
+.modal-table__header{
+  width:25%;
+  text-align: left;
+  height:60px;
+}
+
+.contact-delete {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /* 横方向の中央寄せ */
+  margin-top: 80px;
+}
+
+.delete-btn {
+  width: 80px;
+  height: 35px;
+  background: rgb(206, 48, 48);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+
+/* ページネーション */
+.pagenation {
+  margin-left: auto;
+}
+
+.pagination-nav {
+  display: flex;
+  justify-content: center;
+}
+
+.pagination-custom {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-flex;
+  border: 1px solid #dcdcdc;
+  border-radius: 2px;
+  overflow: hidden;
+  font-size: 13px;
+}
+
+.pagination-custom .pagination__item {
+  min-width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid #dcdcdc;
+  background: #fff;
+}
+
+.pagination-custom .pagination__item:last-child {
+  border-right: none;
+}
+
+.pagination-custom a,
+.pagination-custom span {
+  display: block;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  color: #8c7f74;
+  line-height: 32px;
+}
+
+.pagination-custom .pagination__item--active {
+  background: #8c7f74;
+}
+
+.pagination-custom .pagination__item--active span {
+  color: #fff;
+  font-weight: bold;
+}
+
+.pagination-custom .pagination__item--disabled span {
+  color: #ccc;
+}
+
+.pagination-custom a:hover {
+  background: #f5f1ee;
+}
