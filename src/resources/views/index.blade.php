@@ -133,7 +133,7 @@
       <p class="create-form__title">お問い合わせの種類<span class="create-form__title--red">※</span></p>
       <div class="create-form__section">
         <select class="create-form__category-select" name="category_id">
-          <option value="" selected>カテゴリを選択してください</option>
+          <option value="" selected>選択してください</option>
           @foreach ($categories as $category)
             <option value="{{ $category->id }}"
               {{ old('category_id') == $category->id ? 'selected' : '' }}>

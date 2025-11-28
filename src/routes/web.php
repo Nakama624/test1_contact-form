@@ -15,7 +15,6 @@ use App\Http\Controllers\ManagementController;
 |
 */
 
-
 // PG01
 Route::get('/', [ContactController::class, 'index']);
 
@@ -25,28 +24,16 @@ Route::POST('/confirm', [ContactController::class, 'confirm']);
 // PG03
 Route::POST('/thanks', [ContactController::class, 'store']);
 
-// PG04
+// PG04　PG05　PG06　PG07　PG11
 Route::middleware('auth')->group(function () {
   Route::get('/admin', [ManagementController::class, 'index']);
+  Route::match(['GET', 'POST'], '/search', [ManagementController::class, 'search']);
+  Route::get('/reset', [ManagementController::class, 'reset']);
+  Route::delete('/delete/{id}', [ManagementController::class, 'remove']);
+  Route::get('/export', [ManagementController::class, 'export']);
 });
-
-// PG05
-Route::match(['GET', 'POST'], '/search', [ManagementController::class, 'search']);
-
-// PG06
-Route::get('/reset', [ManagementController::class, 'reset']);
-
-// PG07
-Route::delete('/delete/{id}', [ManagementController::class, 'remove']);
 
 // PG08
 // PG09
 // PG10
 // fortify
-
-// PG11
-// // ★ エクスポート（表示ページ分だけ）
-
-
-
-

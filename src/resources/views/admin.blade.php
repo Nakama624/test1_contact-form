@@ -51,9 +51,11 @@
 
     <!-- エクスポート＆ページネーション -->
     <div class="export-pagenation">
-      <button class="button__export" type="submit">エクスポート</button>
+      <form action="/export" method="GET">
+        <button class="button__export" type="submit">エクスポート</button>
+      </form>
       <div class="pagenation">
-        {{ $contacts->links('vendor.pagination.numbers-only') }}
+        {{ $contacts->appends($search)->links('vendor.pagination.numbers-only') }}
       </div>
     </div>
     @php 
