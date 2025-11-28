@@ -1,17 +1,16 @@
 # contact-form
 
 ## Laravel環境構築
-・docker-compose up -d --build
-・docker-compose exec php bash
-・composer create-project "laravel/laravel=8.*" . --prefer-dist
-・config/app.php→'timezone' => 'Asia/Tokyo',（日本時間に変更）
-・.envで環境変数の修正
-≪マイグレーション/シーディング≫
-・php artisan make:migration create_categories_table
-  php artisan make:migration contacts
- 　(usersは既存のテーブルを使用) 
-・php artisan migrate:fresh（←既存のusersテーブルを使用したため、flesh）
-・php artisan db:seed
+git clone git@github.com:Nakama624/test1_contact-form.git
+cd test1_contact-form
+docker-compose up -d --build
+docker-compose exec php bash
+composer install
+cp .env.example .env
+　～環境変数の変更～
+php artisan key:generate
+php artisan migrate
+php artisan db:seed
 
 ## 使用技術（実行環境）
 PHP：Laravel Framework 8.83.29
@@ -28,6 +27,8 @@ PHP：Laravel Framework 8.83.29
   http://localhost/register
 ・管理
   http://localhost/admin
+・phpMyAdmin
+　http://localhost:8080/
 
 
 
